@@ -13,8 +13,8 @@ const db = knex({
     // user : 'redvanisation',
     // password : '',
     // database : 'test'
-    connectionString: process.env.DATABASE_URL,
-    ssl: true,
+    connectionString: process.env.DATABASE_URL
+    // ssl: true,
   }
 });
 
