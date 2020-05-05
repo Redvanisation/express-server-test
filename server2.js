@@ -25,7 +25,7 @@ const app = express();
 app.use(express.urlencoded({extended: false}));
 app.use(cors());
 
-app.get('/', (req, res) => db('users').select('*').then(users => res.json(users)));
+app.get('/', (req, res) => res.send('App working!'));
 app.post('/register', (req, res) => register.handleRegister(req, res, db, bcrypt));
 app.post('/signin', (req, res) => signin.handleSignin(req, res, db, bcrypt));
 app.get('/profile/:id', (req, res) => users.handleGetUser(req, res, db));
