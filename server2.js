@@ -9,10 +9,12 @@ const users = require('./controllers/users');
 const db = knex({
   client: 'pg',
   connection: {
-    host : '127.0.0.1',
-    user : 'redvanisation',
-    password : '',
-    database : 'test'
+    // host : '127.0.0.1',
+    // user : 'redvanisation',
+    // password : '',
+    // database : 'test'
+    connectionString: process.env.DATABASE_URL,
+    ssl: true,
   }
 });
 
